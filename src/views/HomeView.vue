@@ -1,18 +1,19 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+    <div class="">
+        <ChartView route="http://192.168.1.133:8001/api/charts/sale" chart="line"></ChartView>
+    </div>
+    <div>
+        <BarChart route="http://192.168.1.133:8001/api/charts/sale" chart="bar" ></BarChart>
+    </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import ChartView from '@/components/ChartView.vue';
+import BarChart from '@/components/BarChart.vue';
+
+
 
 export default {
-  name: "HomeView",
-  components: {
-    HelloWorld,
-  },
+    components: { ChartView, BarChart },
 };
 </script>
